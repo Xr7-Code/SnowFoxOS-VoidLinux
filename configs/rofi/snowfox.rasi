@@ -1,0 +1,101 @@
+/* SnowFoxOS v3 — Rofi Theme: snowfox */
+
+* {
+    bg:         #0f0f0f;
+    bg2:        #1a1a1a;
+    fg:         #e8e8e8;
+    fg-dim:     #3a3a3a;
+    accent:     #9B59B6;
+    urgent:     #E67E22;
+    selected-bg: #2a2a2a;
+
+    background-color:   transparent;
+    text-color:         @fg;
+    font:               "Noto Sans 12";
+    border:             0;
+    margin:             0;
+    padding:            0;
+    spacing:            0;
+}
+
+window {
+    width:              500px;
+    background-color:   @bg;
+    border:             1px solid @fg-dim;
+    border-radius:      8px;
+    padding:            8px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing:  6px;
+}
+
+inputbar {
+    background-color:   @bg2;
+    border-radius:      4px;
+    padding:            8px 12px;
+    children:           [ prompt, entry ];
+    spacing:            6px;
+}
+
+prompt {
+    text-color: @accent;
+}
+
+entry {
+    text-color:         @fg;
+    placeholder:        "Suchen...";
+    placeholder-color:  @fg-dim;
+    cursor:             text;
+}
+
+listview {
+    lines:              8;
+    scrollbar:          false;
+    spacing:            2px;
+}
+
+element {
+    padding:            8px 10px;
+    border-radius:      4px;
+    spacing:            8px;
+    children:           [ element-icon, element-text ];
+}
+
+element normal normal {
+    background-color:   transparent;
+    text-color:         @fg;
+}
+
+element normal urgent {
+    text-color:         @urgent;
+}
+
+element selected normal {
+    background-color:   @selected-bg;
+    text-color:         @accent;
+}
+
+element selected urgent {
+    background-color:   @urgent;
+    text-color:         @bg;
+}
+
+element-icon {
+    size:               24px;
+    vertical-align:     0.5;
+}
+
+element-text {
+    vertical-align:     0.5;
+    highlight:          bold @accent;
+}
+
+scrollbar {
+    width:              4px;
+    handle-width:       4px;
+    handle-color:       @fg-dim;
+    background-color:   @bg2;
+    border-radius:      2px;
+}
