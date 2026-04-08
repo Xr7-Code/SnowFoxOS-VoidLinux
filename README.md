@@ -4,7 +4,7 @@
 
 </div>
 
-# SnowFoxOS v2.0
+# SnowFoxOS v3.0
 
 <div align="center">
 
