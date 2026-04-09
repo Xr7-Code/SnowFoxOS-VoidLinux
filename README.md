@@ -8,7 +8,7 @@
 
 <div align="center">
 
-**A lightweight, performance-focused Wayland desktop built on Debian 12**
+**A lightweight, performance-focused Wayland desktop built on Debian 12. ToDo: Warnung, nicht aktuell. Funktioniert nicht richtig auf Void Linux.**
 
 ![Version](https://img.shields.io/badge/version-v2.0-9B59B6?style=flat-square)
 ![Debian](https://img.shields.io/badge/base-Debian%2012-A81D33?style=flat-square&logo=debian&logoColor=white)
