@@ -42,16 +42,8 @@ check_root() {
 }
 
 check_void() {
-    if [[ ! -f /etc/void-release ]]; then
-        error "Void Linux nicht erkannt. /etc/void-release fehlt."
-    fi
-    # glibc oder musl erkennen
-    if xbps-query -l 2>/dev/null | grep -q "musl"; then
-        LIBC="musl"
-    else
-        LIBC="glibc"
-    fi
-    success "Void Linux erkannt ($LIBC)."
+    command -v xbps-install >/dev/null 2>&1 || error "Kein Void (xbps fehlt)"
+    success "Void Linux erkannt."
 }
 
 check_user() {
